@@ -1,0 +1,11 @@
+{
+  "name": "dgpulse-scripts",
+  "version": "1.0.0",
+  "description": "Fetch DGPT standings from StatMando",
+  "type": "module",
+  "main": "fetch-standings.js",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "node-fetch": "^3.3.2"
+  }
+}
