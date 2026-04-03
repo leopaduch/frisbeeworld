@@ -15,21 +15,21 @@ const HEADERS = {
 // ── Logo map — add new sponsors here when they appear ─────────
 // Logos are hosted in /logos/ folder in the repo
 const LOGO_MAP = {
-  "Discmania":     "/logos/discmania.png",
-  "Discraft":      "/logos/discraft.png",
-  "Innova":        "/logos/innova.png",
-  "MVP":           "/logos/mvp.png",
-  "Latitude 64":   "/logos/latitude64.png",
-  "Dynamic Discs": "/logos/dynamicdiscs.png",
-  "DGA":           "/logos/dga.png",
-  "Prodigy":       "/logos/prodigy.png",
-  "Kastaplast":    "/logos/kastaplast.png",
-  "Westside":      "/logos/westside.png",
-  "Thought Space Athletics": "/logos/thoughtspace.png",
-  "Axiom":         "/logos/axiom.png",
-  "Streamline":    "/logos/streamline.png",
-  "Mint Discs":    "/logos/mint.png",
-  "RPM Discs":     "/logos/rpm.png",
+  "Discmania":     "/logo/discmania.png",
+  "Discraft":      "/logo/discraft.png",
+  "Innova":        "/logo/innova.jpg",
+  "MVP":           "/logo/MVP.png",
+  "Latitude 64":   "/logo/latitude64.png",
+  "Dynamic Discs": "/logo/dynamicdiscs.png",
+  "DGA":           "/logo/dga.jpeg",
+  "Prodigy":       "/logo/prodigy.png",
+  "Kastaplast":    "/logo/kastaplast.png",
+  "Westside":      "/logo/westside.png",
+  "Thought Space Athletics": "/logo/thoughtspace.png",
+  "Axiom":         "/logo/axiom.png",
+  "Streamline":    "/logo/streamline.png",
+  "Mint Discs":    "/logo/mint.png",
+  "RPM Discs":     "/logo/rpm.png",
 };
 
 // ── Fetch sponsor from StatMando player profile ───────────────
