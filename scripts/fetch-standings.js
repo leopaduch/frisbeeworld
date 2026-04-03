@@ -41,6 +41,7 @@ const SPONSOR_NORMALIZE = {
   "Lat 64":                    "Latitude 64",
   "Infinite Discs":            "Infinite",
   "Thought Space":             "Thought Space Athletics",
+  "ThoughtSpace":              "Thought Space Athletics",
   "TSA":                       "Thought Space Athletics",
   "MVP Disc Sports":           "MVP",
   "Kastaplast Discs":          "Kastaplast",
@@ -147,8 +148,8 @@ async function enrichWithSponsors(players, existingPlayers) {
 
   return players.map(p => ({
     ...p,
-    sponsor: existing[p.name]?.sponsor || '',
-    sponsorLogo: existing[p.name]?.sponsorLogo || '',
+    sponsor: normalizeSponsor(existing[p.name]?.sponsor || ''),
+    sponsorLogo: LOGO_MAP[normalizeSponsor(existing[p.name]?.sponsor || '')] || existing[p.name]?.sponsorLogo || '',
   }));
 }
 
