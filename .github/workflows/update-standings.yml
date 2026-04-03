@@ -2,7 +2,7 @@ name: Update DGPT standings
 
 on:
   schedule:
-    - cron: '0 14 * * 1'   # Every Monday at 9am ET (14:00 UTC)
+    - cron: '0 14 * * *'   # Every day at 9am ET (14:00 UTC)
   workflow_dispatch:         # Also lets you trigger it manually from GitHub
 
 jobs:
@@ -22,14 +22,14 @@ jobs:
         run: npm install
         working-directory: scripts
 
-      - name: Fetch standings
+      - name: Fetch standings and schedule
         run: node fetch-standings.js
         working-directory: scripts
 
       - name: Commit updated data
         run: |
-          git config user.name  "DGPulse Bot"
-          git config user.email "bot@dgpulse"
-          git add data/standings.json
-          git diff --staged --quiet || git commit -m "standings: auto-update $(date +'%Y-%m-%d')"
+          git config user.name  "FrisbeeWorld Bot"
+          git config user.email "bot@frisbee.world"
+          git add data/standings.json data/schedule.json
+          git diff --staged --quiet || git commit -m "data: auto-update $(date +'%Y-%m-%d')"
           git push
