@@ -542,15 +542,15 @@ function renderCup() {
       </div>`).join("");
 
     return `
-      <div class="brand-group" id="brand-${brandId}">
+      <div class="brand-group collapsed" id="brand-${brandId}">
         <div class="brand-header" onclick="toggleBrand('${brandId}')">
-          <div style="flex:1">
-            <div class="brand-name">${brand}</div>
-            <div class="brand-player-count">${players.length} player${players.length!==1?"s":""} · ${totalWins} win${totalWins!==1?"s":""}</div>
+          <div class="player-col">
+            <div class="player-name">${brand}</div>
+            <div class="player-sub">${players.length} player${players.length!==1?"s":""} · ${totalWins} win${totalWins!==1?"s":""}</div>
           </div>
-          <div style="text-align:right;margin-right:8px;">
-            <div class="brand-total">${rnd(totalPts)}</div>
-            <div class="brand-player-count">total pts</div>
+          <div class="pts-col">
+            <div class="pts-main">${rnd(totalPts)}</div>
+            <div class="player-sub">total pts</div>
           </div>
           <div class="brand-chevron">›</div>
         </div>
