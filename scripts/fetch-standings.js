@@ -13,22 +13,23 @@ const HEADERS = {
 };
 
 // ── Logo map — add new sponsors here when they appear ─────────
+// Logos are hosted in /logos/ folder in the repo
 const LOGO_MAP = {
-  "Discmania":     "https://cdn.brandfetch.io/discmania.net/w/400/h/400/logo",
-  "Discraft":      "https://cdn.brandfetch.io/discraft.com/w/400/h/400/logo",
-  "Innova":        "https://cdn.brandfetch.io/innovadiscs.com/w/400/h/400/logo",
-  "MVP":           "https://cdn.brandfetch.io/mvpdiscsports.com/w/400/h/400/logo",
-  "Latitude 64":   "https://cdn.brandfetch.io/latitude64.se/w/400/h/400/logo",
-  "Dynamic Discs": "https://cdn.brandfetch.io/dynamicdiscs.com/w/400/h/400/logo",
-  "DGA":           "https://cdn.brandfetch.io/discgolfassoc.com/w/400/h/400/logo",
-  "Prodigy":       "https://cdn.brandfetch.io/prodigydisc.com/w/400/h/400/logo",
-  "Kastaplast":    "https://cdn.brandfetch.io/kastaplast.com/w/400/h/400/logo",
-  "Westside":      "https://cdn.brandfetch.io/westsidediscs.com/w/400/h/400/logo",
-  "Thought Space Athletics": "https://cdn.brandfetch.io/thoughtspaceathletics.com/w/400/h/400/logo",
-  "Axiom":         "https://cdn.brandfetch.io/axiomdiscs.com/w/400/h/400/logo",
-  "Streamline":    "https://cdn.brandfetch.io/streamlinediscs.com/w/400/h/400/logo",
-  "Mint Discs":    "https://cdn.brandfetch.io/mintdiscs.com/w/400/h/400/logo",
-  "RPM Discs":     "https://cdn.brandfetch.io/rpmdiscs.com/w/400/h/400/logo",
+  "Discmania":     "/logos/discmania.png",
+  "Discraft":      "/logos/discraft.png",
+  "Innova":        "/logos/innova.png",
+  "MVP":           "/logos/mvp.png",
+  "Latitude 64":   "/logos/latitude64.png",
+  "Dynamic Discs": "/logos/dynamicdiscs.png",
+  "DGA":           "/logos/dga.png",
+  "Prodigy":       "/logos/prodigy.png",
+  "Kastaplast":    "/logos/kastaplast.png",
+  "Westside":      "/logos/westside.png",
+  "Thought Space Athletics": "/logos/thoughtspace.png",
+  "Axiom":         "/logos/axiom.png",
+  "Streamline":    "/logos/streamline.png",
+  "Mint Discs":    "/logos/mint.png",
+  "RPM Discs":     "/logos/rpm.png",
 };
 
 // ── Fetch sponsor from StatMando player profile ───────────────
