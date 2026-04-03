@@ -76,7 +76,10 @@
   .player-tap:active { opacity:0.6; }
   .rank-num { font-family:var(--font-d); font-size:16px; font-weight:800; width:22px; text-align:center; color:var(--muted); flex-shrink:0; }
   .rank-num.gold{color:#f5c842} .rank-num.silver{color:#b0b8c8} .rank-num.bronze{color:#c8845a}
-  .avatar { width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-d); font-size:12px; font-weight:700; flex-shrink:0; }
+  .avatar { width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-d); font-size:12px; font-weight:700; flex-shrink:0; overflow:hidden; background:var(--navy3); }
+  .avatar img { width:100%; height:100%; object-fit:contain; padding:5px; border-radius:50%; }
+  .avatar img.logo-dark { filter:invert(1) brightness(2); }
+  .avatar.fallback { font-size:12px; }
   .player-col { flex:1; min-width:0; }
   .player-name { font-family:var(--font-d); font-size:16px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:1.2; }
   .player-sub { font-size:11px; color:var(--muted); margin-top:1px; }
@@ -87,7 +90,7 @@
   .chevron { color:var(--muted); font-size:18px; margin-left:auto; }
 
   .leader-wrap { display:flex; align-items:center; gap:14px; }
-  .leader-av { width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-d); font-size:18px; font-weight:800; flex-shrink:0; border:2px solid var(--accent); }
+  .leader-av { width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-d); font-size:18px; font-weight:800; flex-shrink:0; border:2px solid var(--accent); overflow:hidden; background:var(--navy3); }
   .leader-name { font-family:var(--font-d); font-size:22px; font-weight:800; line-height:1.1; }
   .leader-sub { font-size:12px; color:var(--muted); margin-top:3px; }
   .leader-pts { margin-left:auto; text-align:right; flex-shrink:0; }
@@ -283,13 +286,24 @@ function buildCountdown() {
 }
 
 // ── Render helpers ────────────────────────────────────────────
+function avatarHtml(p, size) {
+  const a = av(standings[currentDiv].indexOf(p));
+  if (p.sponsorLogo) {
+    return `<div class="avatar" style="background:var(--navy3)"><img src="${p.sponsorLogo}" alt="${p.sponsor}" class="logo-dark" onerror="this.parentNode.classList.add('fallback');this.parentNode.innerHTML='${ini(p.name)}';this.parentNode.style.background='${a.bg}';this.parentNode.style.color='${a.color}';"></div>`;
+  }
+  return `<div class="avatar" style="background:${a.bg};color:${a.color}">${ini(p.name)}</div>`;
+}
+
 function playerRow(p, i, clickable) {
   const a = av(i);
   const gain = p.pointsGain > 0 ? `<div class="pts-gain">+${rnd(p.pointsGain)}</div>` : "";
+  const avHtml = p.sponsorLogo
+    ? `<div class="avatar"><img src="${p.sponsorLogo}" alt="${p.sponsor || ''}" class="logo-dark" onerror="this.style.display='none';this.parentNode.textContent='${ini(p.name)}';this.parentNode.style.background='${a.bg}';this.parentNode.style.color='${a.color}';"></div>`
+    : `<div class="avatar" style="background:${a.bg};color:${a.color}">${ini(p.name)}</div>`;
   if (clickable) return `
     <div class="player-tap" onclick="showPlayer(${i})">
       <div class="rank-num ${rc(p.rank)}">${p.rank}</div>
-      <div class="avatar" style="background:${a.bg};color:${a.color}">${ini(p.name)}</div>
+      ${avHtml}
       <div class="player-col">
         <div class="player-name">${p.name}</div>
         <div class="player-sub">${p.wins}W · ${p.top10s} top-10 · ${p.starts} starts</div>
@@ -300,7 +314,7 @@ function playerRow(p, i, clickable) {
   return `
     <div class="standing-row">
       <div class="rank-num ${rc(p.rank)}">${p.rank}</div>
-      <div class="avatar" style="background:${a.bg};color:${a.color}">${ini(p.name)}</div>
+      ${avHtml}
       <div class="player-col">
         <div class="player-name">${p.name}</div>
         <div class="player-sub">${p.wins}W · ${p.top10s} top-10</div>
@@ -353,9 +367,12 @@ function showPlayer(idx) {
   const p = standings[currentDiv][idx], a = av(idx);
   const det = document.getElementById("player-detail");
   det.style.display = "block";
+  const logoHtml = p.sponsorLogo
+    ? `<div class="leader-av"><img src="${p.sponsorLogo}" alt="${p.sponsor || ''}" class="logo-dark" style="width:100%;height:100%;object-fit:contain;padding:8px;" onerror="this.style.display='none';this.parentNode.textContent='${ini(p.name)}';this.parentNode.style.background='${a.bg}';this.parentNode.style.color='${a.color}';"></div>`
+    : `<div class="leader-av" style="background:${a.bg};color:${a.color}">${ini(p.name)}</div>`;
   det.innerHTML = `
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
-      <div class="leader-av" style="background:${a.bg};color:${a.color}">${ini(p.name)}</div>
+      ${logoHtml}
       <div>
         <div class="leader-name">${p.name}</div>
         <div class="leader-sub">Rank #${p.rank} · ${currentDiv} · ${p.qualified?"Qualified ✓":"Not qualified"}</div>
@@ -367,7 +384,7 @@ function showPlayer(idx) {
       <div class="stat-box"><div class="stat-num">${p.top10s}</div><div class="stat-lbl">Top 10s</div></div>
       <div class="stat-box"><div class="stat-num">${p.starts}</div><div class="stat-lbl">Starts</div></div>
       <div class="stat-box"><div class="stat-num">+${rnd(p.pointsGain)}</div><div class="stat-lbl">Last event</div></div>
-      <div class="stat-box"><div class="stat-num">${p.rank}</div><div class="stat-lbl">World rank</div></div>
+      <div class="stat-box"><div class="stat-num" style="font-size:13px">${p.sponsor || "—"}</div><div class="stat-lbl">Sponsor</div></div>
     </div>
     <a class="sm-link" href="https://statmando.com/player/${p.name.toLowerCase().replace(/\s+/g,"-")}/profile" target="_blank">Full profile on StatMando ↗</a>`;
   det.scrollIntoView({ behavior:"smooth", block:"nearest" });
