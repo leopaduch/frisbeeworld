@@ -153,36 +153,30 @@ async function enrichWithSponsors(players, existingPlayers) {
   }));
 }
 
-// ── Scrape winner from PDGA event results page ───────────────
-async function fetchPdgaWinner(pdgaId, div) {
-  const url = `https://www.pdga.com/apps/tournament/live-api/live-results-access-public.php?TournID=${pdgaId}&Division=${div}&Round=0&Type=results`;
+// ── Scrape winners from discgolffanatic.com winners table ────
+async function fetchAllWinners() {
+  const url = 'https://discgolffanatic.com/2026-disc-golf-pro-tour-winners/';
   try {
-    const res = await fetch(url, { headers: { ...HEADERS, 'Accept': 'application/json' } });
-    if (!res.ok) return null;
-    const json = await res.json();
-    // PDGA Live API returns players sorted by place
-    const data = json?.data || [];
-    const winner = data.find(p => parseInt(p.Place) === 1);
-    if (winner) return `${winner.FirstName} ${winner.LastName}`.trim();
-    return null;
+    const res = await fetch(url, { headers: HEADERS });
+    if (!res.ok) return {};
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const winners = {};
+    $('table tbody tr').each((_, row) => {
+      const cells = $(row).find('td');
+      if (cells.length < 6) return;
+      const name = $(cells[2]).text().trim();
+      const mpo  = $(cells[4]).text().trim();
+      const fpo  = $(cells[5]).text().trim();
+      if (name && (mpo || fpo)) {
+        winners[name] = { mpo: mpo || null, fpo: fpo || null };
+      }
+    });
+    console.log(`  → Found winners for ${Object.keys(winners).length} events`);
+    return winners;
   } catch(e) {
-    // Fall back to HTML scrape
-    try {
-      const pageUrl = `https://www.pdga.com/tour/event/${pdgaId}`;
-      const res = await fetch(pageUrl, { headers: HEADERS });
-      if (!res.ok) return null;
-      const html = await res.text();
-      const $ = cheerio.load(html);
-      // Find results section for this division
-      let winner = null;
-      $(`#${div.toLowerCase()}-results tbody tr, .${div.toLowerCase()}-results tbody tr`).first().find('td').each((i, el) => {
-        const text = $(el).text().trim();
-        if (i === 1 && text.length > 2) { winner = text; return false; }
-      });
-      return winner;
-    } catch(e2) {
-      return null;
-    }
+    console.log(`  Could not fetch winners: ${e.message}`);
+    return {};
   }
 }
 
@@ -229,31 +223,22 @@ async function updateSchedule(existingSchedule) {
     }
   }
 
-  // Scrape winners from PDGA for completed events
-  console.log('\nFetching winners from PDGA...');
+  // Scrape all winners from discgolffanatic.com
+  console.log('\nFetching winners from discgolffanatic.com...');
+  const allWinners = await fetchAllWinners();
+
   for (const e of events) {
     if (e.status !== 'done') continue;
-    if (e.winner_mpo && e.winner_fpo) continue;
-    if (!e.pdga_id) continue;
+    // Match event name to table — try exact then partial
+    const match = allWinners[e.name] ||
+      Object.entries(allWinners).find(([k]) =>
+        k.toLowerCase().includes(e.name.toLowerCase().split(' ')[0]) ||
+        e.name.toLowerCase().includes(k.toLowerCase().split(' ')[0])
+      )?.[1];
 
-    console.log(`  Fetching results for ${e.name} (PDGA ${e.pdga_id})...`);
-
-    if (!e.winner_mpo) {
-      const mpoWinner = await fetchPdgaWinner(e.pdga_id, 'MPO');
-      if (mpoWinner) {
-        e.winner_mpo = mpoWinner;
-        console.log(`    MPO: ${mpoWinner}`);
-      }
-      await new Promise(r => setTimeout(r, 800));
-    }
-
-    if (!e.winner_fpo) {
-      const fpoWinner = await fetchPdgaWinner(e.pdga_id, 'FPO');
-      if (fpoWinner) {
-        e.winner_fpo = fpoWinner;
-        console.log(`    FPO: ${fpoWinner}`);
-      }
-      await new Promise(r => setTimeout(r, 800));
+    if (match) {
+      if (match.mpo) { e.winner_mpo = match.mpo; console.log(`  ${e.name} MPO: ${match.mpo}`); }
+      if (match.fpo) { e.winner_fpo = match.fpo; console.log(`  ${e.name} FPO: ${match.fpo}`); }
     }
   }
 
