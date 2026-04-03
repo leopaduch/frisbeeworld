@@ -579,7 +579,10 @@ function renderShowdown() {
       const extra = top5.length > 3 ? ` +${top5.length - 3}` : "";
       return { brand, avg, wins, topNames, extra, count: top5.length };
     })
-    .sort((a,b) => b.avg - a.avg)
+    .sort((a,b) => {
+      if (b.wins !== a.wins) return b.wins - a.wins;
+      return b.avg - a.avg;
+    })
     .slice(0,10);
 
   const rankCls = i => i===0?"gold":i===1?"silver":i===2?"bronze":"";
