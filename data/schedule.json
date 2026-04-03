@@ -1,35 +1,282 @@
-name: Update DGPT standings
-
-on:
-  schedule:
-    - cron: '0 14 * * *'   # Every day at 9am ET (14:00 UTC)
-  workflow_dispatch:         # Also lets you trigger it manually from GitHub
-
-jobs:
-  update:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: scripts
-
-      - name: Fetch standings and schedule
-        run: node fetch-standings.js
-        working-directory: scripts
-
-      - name: Commit updated data
-        run: |
-          git config user.name  "FrisbeeWorld Bot"
-          git config user.email "bot@frisbee.world"
-          git add data/standings.json data/schedule.json
-          git diff --staged --quiet || git commit -m "data: auto-update $(date +'%Y-%m-%d')"
-          git push
+{
+  "updated": "2026-04-03",
+  "season": 2026,
+  "events": [
+    {
+      "month": "Feb",
+      "day": "27",
+      "name": "Supreme Flight Open",
+      "loc": "Olympus DGC \u00b7 Brooksville, FL",
+      "tier": "Elite Series",
+      "status": "done",
+      "dates": "Feb 27 \u2013 Mar 1",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96401
+    },
+    {
+      "month": "Mar",
+      "day": "13",
+      "name": "Big Easy Open",
+      "loc": "Parc des Familles \u00b7 New Orleans, LA",
+      "tier": "Elite Series",
+      "status": "done",
+      "dates": "Mar 13\u201315",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96402
+    },
+    {
+      "month": "Mar",
+      "day": "27",
+      "name": "Queen City Classic",
+      "loc": "Hornets Nest DGC \u00b7 Charlotte, NC",
+      "tier": "Elite Series",
+      "status": "done",
+      "dates": "Mar 27\u201329",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96403
+    },
+    {
+      "month": "Apr",
+      "day": "9",
+      "name": "PDGA Champions Cup",
+      "loc": "New London Tech \u00b7 Lynchburg, VA",
+      "tier": "PDGA Major",
+      "status": "next",
+      "dates": "Apr 9\u201312",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 97336
+    },
+    {
+      "month": "Apr",
+      "day": "17",
+      "name": "Jonesboro Open",
+      "loc": "Disc Side of Heaven \u00b7 Jonesboro, AR",
+      "tier": "Elite Series",
+      "status": "upcoming",
+      "dates": "Apr 17\u201319",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96404
+    },
+    {
+      "month": "Apr",
+      "day": "24",
+      "name": "Kansas City Wide Open",
+      "loc": "Rinn Park \u00b7 Liberty, MO",
+      "tier": "Elite Series",
+      "status": "upcoming",
+      "dates": "Apr 24\u201326",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96407
+    },
+    {
+      "month": "May",
+      "day": "7",
+      "name": "The Open at Austin",
+      "loc": "Austin, TX",
+      "tier": "Elite Series+",
+      "status": "upcoming",
+      "dates": "May 7\u201310",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96408
+    },
+    {
+      "month": "May",
+      "day": "21",
+      "name": "OTB Open",
+      "loc": "Stockton, CA",
+      "tier": "Elite Series+",
+      "status": "upcoming",
+      "dates": "May 21\u201324",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96409
+    },
+    {
+      "month": "Jun",
+      "day": "4",
+      "name": "Northwest Championship",
+      "loc": "Milo McIver State Park \u00b7 Portland, OR",
+      "tier": "Elite Series+",
+      "status": "upcoming",
+      "dates": "Jun 4\u20137",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96410
+    },
+    {
+      "month": "Jun",
+      "day": "18",
+      "name": "PDGA European Open",
+      "loc": "Song Festival Grounds \u00b7 Tallinn, Estonia",
+      "tier": "PDGA Major",
+      "status": "upcoming",
+      "dates": "Jun 18\u201321",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": null
+    },
+    {
+      "month": "Jun",
+      "day": "26",
+      "name": "Swedish Open",
+      "loc": "Bor\u00e5s, Sweden",
+      "tier": "Elite Series",
+      "status": "upcoming",
+      "dates": "Jun 26\u201328",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96411
+    },
+    {
+      "month": "Jul",
+      "day": "3",
+      "name": "Ale Open",
+      "loc": "Ale DGC \u00b7 Nol, Sweden",
+      "tier": "Elite Series",
+      "status": "upcoming",
+      "dates": "Jul 3\u20135",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96412
+    },
+    {
+      "month": "Jul",
+      "day": "10",
+      "name": "Heinola Open",
+      "loc": "Heinola, Finland",
+      "tier": "Elite Series",
+      "status": "upcoming",
+      "dates": "Jul 10\u201312",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96413
+    },
+    {
+      "month": "Jul",
+      "day": "16",
+      "name": "US Women's Disc Golf Championship",
+      "loc": "Salt Lake City, UT",
+      "tier": "PDGA Major",
+      "status": "upcoming",
+      "dates": "Jul 16\u201319",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": null
+    },
+    {
+      "month": "Jul",
+      "day": "30",
+      "name": "Ledgestone Open",
+      "loc": "Northwood Park \u00b7 Peoria, IL",
+      "tier": "Elite Series+",
+      "status": "upcoming",
+      "dates": "Jul 30 \u2013 Aug 2",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96414
+    },
+    {
+      "month": "Aug",
+      "day": "7",
+      "name": "Discmania Challenge",
+      "loc": "TBD",
+      "tier": "Elite Series",
+      "status": "upcoming",
+      "dates": "Aug 7\u20139",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96415
+    },
+    {
+      "month": "Aug",
+      "day": "14",
+      "name": "LWS Open at Idlewild",
+      "loc": "Idlewild \u00b7 Burlington, KY",
+      "tier": "Elite Series",
+      "status": "upcoming",
+      "dates": "Aug 14\u201317",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96417
+    },
+    {
+      "month": "Aug",
+      "day": "26",
+      "name": "PDGA Pro World Championships",
+      "loc": "Kensington Metropark \u00b7 Milford, MI",
+      "tier": "PDGA Major",
+      "status": "upcoming",
+      "dates": "Aug 26\u201330",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": null
+    },
+    {
+      "month": "Sep",
+      "day": "4",
+      "name": "Discraft Great Lakes Open",
+      "loc": "Toboggan \u00b7 Milford, MI",
+      "tier": "Elite Series+",
+      "status": "upcoming",
+      "dates": "Sep 4\u20137",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96416
+    },
+    {
+      "month": "Sep",
+      "day": "18",
+      "name": "Green Mountain Championship",
+      "loc": "Brewster Ridge \u00b7 Stowe, VT",
+      "tier": "Playoffs",
+      "status": "upcoming",
+      "dates": "Sep 18\u201321",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96418
+    },
+    {
+      "month": "Sep",
+      "day": "25",
+      "name": "MVP Open x OTB",
+      "loc": "Maple Hill \u00b7 Leicester, MA",
+      "tier": "Playoffs",
+      "status": "upcoming",
+      "dates": "Sep 25\u201328",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96419
+    },
+    {
+      "month": "Oct",
+      "day": "9",
+      "name": "USDGC",
+      "loc": "Winthrop University \u00b7 Rock Hill, SC",
+      "tier": "PDGA Major",
+      "status": "upcoming",
+      "dates": "Oct 9\u201312",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": null
+    },
+    {
+      "month": "Oct",
+      "day": "16",
+      "name": "DGPT Championship",
+      "loc": "Ivy Hill DGC \u00b7 Lynchburg, VA",
+      "tier": "Championship",
+      "status": "upcoming",
+      "dates": "Oct 16\u201319",
+      "winner_mpo": null,
+      "winner_fpo": null,
+      "pdga_id": 96420
+    }
+  ]
+}
