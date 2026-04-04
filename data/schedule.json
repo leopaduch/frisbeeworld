@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-03",
+  "updated": "2026-04-04",
   "season": 2026,
   "events": [
     {
@@ -34,8 +34,8 @@
       "tier": "Elite Series",
       "status": "done",
       "dates": "Mar 27–29",
-      "winner_mpo": "Gannon Buhr",
-      "winner_fpo": "Jessica Gurthie",
+      "winner_mpo": "Jessica Gurthie",
+      "winner_fpo": "Gannon Buhr",
       "pdga_id": 96403
     },
     {
