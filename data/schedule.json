@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09",
+  "updated": "2026-04-10",
   "season": 2026,
   "events": [
     {
@@ -44,7 +44,7 @@
       "name": "PDGA Champions Cup",
       "loc": "New London Tech · Lynchburg, VA",
       "tier": "PDGA Major",
-      "status": "next",
+      "status": "upcoming",
       "dates": "Apr 9–12",
       "winner_mpo": null,
       "winner_fpo": null,
@@ -56,7 +56,7 @@
       "name": "Jonesboro Open",
       "loc": "Disc Side of Heaven · Jonesboro, AR",
       "tier": "Elite Series",
-      "status": "upcoming",
+      "status": "next",
       "dates": "Apr 17–19",
       "winner_mpo": null,
       "winner_fpo": null,
