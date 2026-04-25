@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-24",
+  "updated": "2026-04-25",
   "season": 2026,
   "events": [
     {
@@ -68,7 +68,7 @@
       "name": "Kansas City Wide Open",
       "loc": "Rinn Park · Liberty, MO",
       "tier": "Elite Series",
-      "status": "next",
+      "status": "upcoming",
       "dates": "Apr 24–26",
       "winner_mpo": null,
       "winner_fpo": null,
@@ -80,7 +80,7 @@
       "name": "The Open at Austin",
       "loc": "Austin, TX",
       "tier": "Elite Series+",
-      "status": "upcoming",
+      "status": "next",
       "dates": "May 7–10",
       "winner_mpo": null,
       "winner_fpo": null,
