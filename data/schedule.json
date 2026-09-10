@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09",
+  "updated": "2026-09-10",
   "season": 2026,
   "events": [
     {
@@ -202,8 +202,8 @@
       "tier": "Elite Series",
       "status": "done",
       "dates": "Aug 14–17",
-      "winner_mpo": null,
-      "winner_fpo": null,
+      "winner_mpo": "Gannon Buhr",
+      "winner_fpo": "Ohn Scoggins",
       "pdga_id": 96417
     },
     {
