@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "season": 2026,
   "events": [
     {
@@ -236,7 +236,7 @@
       "name": "Green Mountain Championship",
       "loc": "Brewster Ridge · Stowe, VT",
       "tier": "Playoffs",
-      "status": "next",
+      "status": "upcoming",
       "dates": "Sep 18–21",
       "winner_mpo": null,
       "winner_fpo": null,
@@ -248,7 +248,7 @@
       "name": "MVP Open x OTB",
       "loc": "Maple Hill · Leicester, MA",
       "tier": "Playoffs",
-      "status": "upcoming",
+      "status": "next",
       "dates": "Sep 25–28",
       "winner_mpo": null,
       "winner_fpo": null,
