@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "season": 2026,
   "events": [
     {
@@ -236,7 +236,7 @@
       "name": "Green Mountain Championship",
       "loc": "Brewster Ridge · Stowe, VT",
       "tier": "Playoffs",
-      "status": "upcoming",
+      "status": "done",
       "dates": "Sep 18–21",
       "winner_mpo": null,
       "winner_fpo": null,
