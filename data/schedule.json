@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25",
+  "updated": "2026-09-26",
   "season": 2026,
   "events": [
     {
@@ -248,7 +248,7 @@
       "name": "MVP Open x OTB",
       "loc": "Maple Hill · Leicester, MA",
       "tier": "Playoffs",
-      "status": "next",
+      "status": "upcoming",
       "dates": "Sep 25–28",
       "winner_mpo": null,
       "winner_fpo": null,
@@ -260,7 +260,7 @@
       "name": "USDGC",
       "loc": "Winthrop University · Rock Hill, SC",
       "tier": "PDGA Major",
-      "status": "upcoming",
+      "status": "next",
       "dates": "Oct 9–12",
       "winner_mpo": null,
       "winner_fpo": null,
