@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "season": 2026,
   "events": [
     {
@@ -260,7 +260,7 @@
       "name": "USDGC",
       "loc": "Winthrop University · Rock Hill, SC",
       "tier": "PDGA Major",
-      "status": "next",
+      "status": "upcoming",
       "dates": "Oct 9–12",
       "winner_mpo": null,
       "winner_fpo": null,
@@ -272,7 +272,7 @@
       "name": "DGPT Championship",
       "loc": "Ivy Hill DGC · Lynchburg, VA",
       "tier": "Championship",
-      "status": "upcoming",
+      "status": "next",
       "dates": "Oct 16–19",
       "winner_mpo": null,
       "winner_fpo": null,
