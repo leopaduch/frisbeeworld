@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "season": 2026,
   "events": [
     {
@@ -260,7 +260,7 @@
       "name": "USDGC",
       "loc": "Winthrop University · Rock Hill, SC",
       "tier": "PDGA Major",
-      "status": "upcoming",
+      "status": "done",
       "dates": "Oct 9–12",
       "winner_mpo": null,
       "winner_fpo": null,
