@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "season": 2026,
   "events": [
     {
@@ -238,8 +238,8 @@
       "tier": "Playoffs",
       "status": "done",
       "dates": "Sep 18–21",
-      "winner_mpo": null,
-      "winner_fpo": null,
+      "winner_mpo": "Raven Newsom",
+      "winner_fpo": "Ohn Scoggins",
       "pdga_id": 96418
     },
     {
@@ -250,8 +250,8 @@
       "tier": "Playoffs",
       "status": "done",
       "dates": "Sep 25–28",
-      "winner_mpo": "Calvin Heimburg",
-      "winner_fpo": "Holyn Handley",
+      "winner_mpo": "Ricky Wysocki",
+      "winner_fpo": "Sintija Klezberga",
       "pdga_id": 96419
     },
     {
