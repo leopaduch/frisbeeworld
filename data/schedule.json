@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "season": 2026,
   "events": [
     {
@@ -272,7 +272,7 @@
       "name": "DGPT Championship",
       "loc": "Ivy Hill DGC · Lynchburg, VA",
       "tier": "Championship",
-      "status": "upcoming",
+      "status": "done",
       "dates": "Oct 16–19",
       "winner_mpo": null,
       "winner_fpo": null,
