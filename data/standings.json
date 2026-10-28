@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "week": "2026-14",
   "note": "After Queen City Classic — 3 events complete",
   "MPO": [
@@ -8,9 +8,9 @@
       "name": "Gannon Buhr",
       "points": 2466.67,
       "pointsGain": 140,
-      "wins": 9,
-      "top10s": 23,
-      "starts": 23,
+      "wins": 10,
+      "top10s": 24,
+      "starts": 24,
       "qualified": true,
       "sponsor": "Discmania",
       "sponsorLogo": "/logo/discmania.png"
@@ -21,8 +21,8 @@
       "points": 1942.94,
       "pointsGain": 250,
       "wins": 4,
-      "top10s": 13,
-      "starts": 19,
+      "top10s": 14,
+      "starts": 20,
       "qualified": true,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -33,8 +33,8 @@
       "points": 1830.38,
       "pointsGain": 175,
       "wins": 2,
-      "top10s": 15,
-      "starts": 22,
+      "top10s": 16,
+      "starts": 23,
       "qualified": true,
       "sponsor": "Innova",
       "sponsorLogo": "/logo/innova.jpg"
@@ -45,8 +45,8 @@
       "points": 1575.83,
       "pointsGain": 156.67,
       "wins": 1,
-      "top10s": 11,
-      "starts": 22,
+      "top10s": 12,
+      "starts": 23,
       "qualified": true,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -57,8 +57,8 @@
       "points": 1498.03,
       "pointsGain": 0,
       "wins": 0,
-      "top10s": 14,
-      "starts": 21,
+      "top10s": 15,
+      "starts": 22,
       "qualified": true,
       "sponsor": "Latitude 64",
       "sponsorLogo": "/logo/latitude64.png"
@@ -69,8 +69,8 @@
       "points": 1409.88,
       "pointsGain": 100,
       "wins": 1,
-      "top10s": 9,
-      "starts": 17,
+      "top10s": 10,
+      "starts": 18,
       "qualified": true,
       "sponsor": "Discmania",
       "sponsorLogo": "/logo/discmania.png"
@@ -81,8 +81,8 @@
       "points": 1349.5,
       "pointsGain": 109.58,
       "wins": 0,
-      "top10s": 6,
-      "starts": 20,
+      "top10s": 7,
+      "starts": 21,
       "qualified": true,
       "sponsor": "DGA",
       "sponsorLogo": "/logo/dga.jpeg"
@@ -94,7 +94,7 @@
       "pointsGain": 51.67,
       "wins": 0,
       "top10s": 7,
-      "starts": 21,
+      "starts": 22,
       "qualified": true,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -106,7 +106,7 @@
       "pointsGain": 90,
       "wins": 0,
       "top10s": 7,
-      "starts": 21,
+      "starts": 22,
       "qualified": true,
       "sponsor": "Discmania",
       "sponsorLogo": "/logo/discmania.png"
@@ -118,7 +118,7 @@
       "pointsGain": 66.25,
       "wins": 1,
       "top10s": 6,
-      "starts": 20,
+      "starts": 21,
       "qualified": true,
       "sponsor": "MVP",
       "sponsorLogo": "/logo/MVP.png"
@@ -129,8 +129,8 @@
       "points": 1207.33,
       "pointsGain": 126.67,
       "wins": 0,
-      "top10s": 7,
-      "starts": 21,
+      "top10s": 8,
+      "starts": 22,
       "qualified": true,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -142,7 +142,7 @@
       "pointsGain": 61.67,
       "wins": 1,
       "top10s": 8,
-      "starts": 22,
+      "starts": 23,
       "qualified": true,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -154,7 +154,7 @@
       "pointsGain": 126.67,
       "wins": 0,
       "top10s": 4,
-      "starts": 17,
+      "starts": 18,
       "qualified": true,
       "sponsor": "Discmania",
       "sponsorLogo": "/logo/discmania.png"
@@ -166,7 +166,7 @@
       "pointsGain": 66.25,
       "wins": 1,
       "top10s": 6,
-      "starts": 16,
+      "starts": 17,
       "qualified": true,
       "sponsor": "MVP",
       "sponsorLogo": "/logo/MVP.png"
@@ -178,7 +178,7 @@
       "pointsGain": 57.5,
       "wins": 1,
       "top10s": 3,
-      "starts": 20,
+      "starts": 21,
       "qualified": true,
       "sponsor": "DGA",
       "sponsorLogo": "/logo/dga.jpeg"
@@ -190,7 +190,7 @@
       "pointsGain": 42.5,
       "wins": 1,
       "top10s": 4,
-      "starts": 20,
+      "starts": 21,
       "qualified": true,
       "sponsor": "MVP",
       "sponsorLogo": "/logo/MVP.png"
@@ -202,7 +202,7 @@
       "pointsGain": 208.33,
       "wins": 0,
       "top10s": 6,
-      "starts": 17,
+      "starts": 18,
       "qualified": true,
       "sponsor": "Kastaplast",
       "sponsorLogo": "/logo/kastaplast.png"
@@ -213,8 +213,8 @@
       "points": 1062.31,
       "pointsGain": 38.33,
       "wins": 0,
-      "top10s": 5,
-      "starts": 18,
+      "top10s": 6,
+      "starts": 19,
       "qualified": true,
       "sponsor": "",
       "sponsorLogo": ""
@@ -226,7 +226,7 @@
       "pointsGain": 90,
       "wins": 0,
       "top10s": 3,
-      "starts": 15,
+      "starts": 16,
       "qualified": true,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -238,7 +238,7 @@
       "pointsGain": 156.67,
       "wins": 0,
       "top10s": 5,
-      "starts": 23,
+      "starts": 24,
       "qualified": true,
       "sponsor": "MVP",
       "sponsorLogo": "/logo/MVP.png"
@@ -250,7 +250,7 @@
       "pointsGain": 76.67,
       "wins": 0,
       "top10s": 4,
-      "starts": 21,
+      "starts": 22,
       "qualified": true,
       "sponsor": "Kastaplast",
       "sponsorLogo": "/logo/kastaplast.png"
@@ -262,7 +262,7 @@
       "pointsGain": 51.67,
       "wins": 0,
       "top10s": 2,
-      "starts": 22,
+      "starts": 23,
       "qualified": true,
       "sponsor": "DGA",
       "sponsorLogo": "/logo/dga.jpeg"
@@ -274,7 +274,7 @@
       "pointsGain": 42.5,
       "wins": 0,
       "top10s": 4,
-      "starts": 19,
+      "starts": 20,
       "qualified": true,
       "sponsor": "DGA",
       "sponsorLogo": "/logo/dga.jpeg"
@@ -286,7 +286,7 @@
       "pointsGain": 90,
       "wins": 0,
       "top10s": 4,
-      "starts": 19,
+      "starts": 20,
       "qualified": true,
       "sponsor": "DGA",
       "sponsorLogo": "/logo/dga.jpeg"
@@ -298,7 +298,7 @@
       "pointsGain": 47.5,
       "wins": 0,
       "top10s": 5,
-      "starts": 22,
+      "starts": 23,
       "qualified": true,
       "sponsor": "DGA",
       "sponsorLogo": "/logo/dga.jpeg"
@@ -310,7 +310,7 @@
       "pointsGain": 191.67,
       "wins": 1,
       "top10s": 5,
-      "starts": 9,
+      "starts": 10,
       "qualified": true,
       "sponsor": "Dynamic Discs",
       "sponsorLogo": "/logo/dynamicdiscs.png"
@@ -321,8 +321,8 @@
       "points": 806.87,
       "pointsGain": 126.67,
       "wins": 0,
-      "top10s": 2,
-      "starts": 16,
+      "top10s": 3,
+      "starts": 17,
       "qualified": true,
       "sponsor": "",
       "sponsorLogo": ""
@@ -334,7 +334,7 @@
       "pointsGain": 42.5,
       "wins": 1,
       "top10s": 2,
-      "starts": 17,
+      "starts": 18,
       "qualified": true,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -490,7 +490,7 @@
       "pointsGain": 140,
       "wins": 0,
       "top10s": 2,
-      "starts": 14,
+      "starts": 15,
       "qualified": false,
       "sponsor": "Mint",
       "sponsorLogo": ""
@@ -514,7 +514,7 @@
       "pointsGain": 109.58,
       "wins": 0,
       "top10s": 0,
-      "starts": 17,
+      "starts": 18,
       "qualified": false,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -526,7 +526,7 @@
       "pointsGain": 109.58,
       "wins": 0,
       "top10s": 0,
-      "starts": 21,
+      "starts": 22,
       "qualified": false,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -766,7 +766,7 @@
       "pointsGain": 109.58,
       "wins": 0,
       "top10s": 1,
-      "starts": 9,
+      "starts": 10,
       "qualified": false,
       "sponsor": "",
       "sponsorLogo": ""
@@ -1211,8 +1211,8 @@
       "points": 2248.33,
       "pointsGain": 140,
       "wins": 6,
-      "top10s": 18,
-      "starts": 19,
+      "top10s": 19,
+      "starts": 20,
       "qualified": true,
       "sponsor": "Innova",
       "sponsorLogo": "/logo/innova.jpg"
@@ -1223,8 +1223,8 @@
       "points": 2113.33,
       "pointsGain": 200,
       "wins": 2,
-      "top10s": 18,
-      "starts": 19,
+      "top10s": 19,
+      "starts": 20,
       "qualified": true,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -1234,9 +1234,9 @@
       "name": "Silva Saarinen",
       "points": 2047.67,
       "pointsGain": 130,
-      "wins": 6,
-      "top10s": 14,
-      "starts": 17,
+      "wins": 7,
+      "top10s": 15,
+      "starts": 18,
       "qualified": true,
       "sponsor": "MVP",
       "sponsorLogo": "/logo/MVP.png"
@@ -1247,8 +1247,8 @@
       "points": 1903,
       "pointsGain": 120,
       "wins": 0,
-      "top10s": 17,
-      "starts": 18,
+      "top10s": 18,
+      "starts": 19,
       "qualified": true,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -1259,8 +1259,8 @@
       "points": 1871,
       "pointsGain": 200,
       "wins": 5,
-      "top10s": 11,
-      "starts": 13,
+      "top10s": 12,
+      "starts": 14,
       "qualified": true,
       "sponsor": "Innova",
       "sponsorLogo": "/logo/innova.jpg"
@@ -1271,8 +1271,8 @@
       "points": 1760.86,
       "pointsGain": 162.78,
       "wins": 1,
-      "top10s": 14,
-      "starts": 19,
+      "top10s": 15,
+      "starts": 20,
       "qualified": true,
       "sponsor": "Discmania",
       "sponsorLogo": "/logo/discmania.png"
@@ -1283,8 +1283,8 @@
       "points": 1664.08,
       "pointsGain": 140,
       "wins": 1,
-      "top10s": 14,
-      "starts": 22,
+      "top10s": 15,
+      "starts": 23,
       "qualified": true,
       "sponsor": "DGA",
       "sponsorLogo": "/logo/dga.jpeg"
@@ -1295,8 +1295,8 @@
       "points": 1406.83,
       "pointsGain": 97.5,
       "wins": 0,
-      "top10s": 8,
-      "starts": 18,
+      "top10s": 9,
+      "starts": 19,
       "qualified": true,
       "sponsor": "Innova",
       "sponsorLogo": "/logo/innova.jpg"
@@ -1308,7 +1308,7 @@
       "pointsGain": 112.5,
       "wins": 0,
       "top10s": 7,
-      "starts": 14,
+      "starts": 15,
       "qualified": true,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -1320,7 +1320,7 @@
       "pointsGain": 70,
       "wins": 0,
       "top10s": 7,
-      "starts": 22,
+      "starts": 23,
       "qualified": true,
       "sponsor": "Innova",
       "sponsorLogo": "/logo/innova.jpg"
@@ -1332,7 +1332,7 @@
       "pointsGain": 250,
       "wins": 1,
       "top10s": 8,
-      "starts": 16,
+      "starts": 17,
       "qualified": true,
       "sponsor": "",
       "sponsorLogo": ""
@@ -1343,8 +1343,8 @@
       "points": 1258.33,
       "pointsGain": 85,
       "wins": 1,
-      "top10s": 5,
-      "starts": 13,
+      "top10s": 6,
+      "starts": 14,
       "qualified": true,
       "sponsor": "Innova",
       "sponsorLogo": "/logo/innova.jpg"
@@ -1356,7 +1356,7 @@
       "pointsGain": 97.5,
       "wins": 0,
       "top10s": 7,
-      "starts": 21,
+      "starts": 22,
       "qualified": true,
       "sponsor": "Westside",
       "sponsorLogo": "/logo/westside.png"
@@ -1368,7 +1368,7 @@
       "pointsGain": 90,
       "wins": 0,
       "top10s": 9,
-      "starts": 20,
+      "starts": 21,
       "qualified": true,
       "sponsor": "Innova",
       "sponsorLogo": "/logo/innova.jpg"
@@ -1380,7 +1380,7 @@
       "pointsGain": 162.78,
       "wins": 1,
       "top10s": 6,
-      "starts": 16,
+      "starts": 17,
       "qualified": true,
       "sponsor": "Innova",
       "sponsorLogo": "/logo/innova.jpg"
@@ -1392,7 +1392,7 @@
       "pointsGain": 162.78,
       "wins": 0,
       "top10s": 5,
-      "starts": 22,
+      "starts": 23,
       "qualified": true,
       "sponsor": "DGA",
       "sponsorLogo": "/logo/dga.jpeg"
@@ -1403,8 +1403,8 @@
       "points": 1083.17,
       "pointsGain": 80,
       "wins": 0,
-      "top10s": 4,
-      "starts": 16,
+      "top10s": 5,
+      "starts": 17,
       "qualified": true,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -1416,7 +1416,7 @@
       "pointsGain": 57.5,
       "wins": 0,
       "top10s": 3,
-      "starts": 15,
+      "starts": 16,
       "qualified": true,
       "sponsor": "Discraft",
       "sponsorLogo": "/logo/discraft.png"
@@ -1440,7 +1440,7 @@
       "pointsGain": 112.5,
       "wins": 0,
       "top10s": 4,
-      "starts": 14,
+      "starts": 15,
       "qualified": false,
       "sponsor": "Innova",
       "sponsorLogo": "/logo/innova.jpg"
@@ -1644,7 +1644,7 @@
       "pointsGain": 125,
       "wins": 0,
       "top10s": 3,
-      "starts": 5,
+      "starts": 6,
       "qualified": false,
       "sponsor": "",
       "sponsorLogo": ""
